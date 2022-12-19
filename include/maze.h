@@ -12,12 +12,12 @@ class Maze {
 		std::vector<std::string> getField();
 		char getCell(Pos p);
 		Pos getStart();
-		int getLung();
-		int getLarg();
+		int getWidth();
+		int getHeight();
 	private:
 		std::vector<std::string> _field;
 		Pos _start;
-		int _lung,_larg; //lunghezza(orizontale), larghezza(verticale)
+		int _width,_height; //larghezza(orizontale), altezza(verticale)
 };
 
 Maze read_from_file(std::string path);

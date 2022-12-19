@@ -4,11 +4,11 @@
 
 #include "maze.h"
 
-Maze::Maze (std::vector<std::string> field, Pos s,int lun, int lar) {
+Maze::Maze (std::vector<std::string> field, Pos s, int width, int height) {
 	_field = field;
 	_start = s;
-	_lung = lun;
-	_larg = lar;
+	_width = width;
+	_height = height;
 }
 
 std::vector<std::string> Maze::getField () {
@@ -24,11 +24,11 @@ Pos Maze::getStart() {
 	return _start;
 }
 
-int Maze::getLung() {
-	return _lung;
+int Maze::getWidth() {
+	return _width;
 }
-int Maze::getLarg() {
-	return _larg;
+int Maze::getHeight() {
+	return _height;
 }
 
 Maze read_from_file (std::string path) {
@@ -56,5 +56,5 @@ Maze read_from_file (std::string path) {
 
 	file.close();
 
-	return Maze(field, s,line.size(),field.size());
+	return Maze(field, s, line.size(), field.size());
 }
