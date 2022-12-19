@@ -107,3 +107,5 @@ Makefile
 libbig_int.a
 librobot_navigation.a
 main
+CMakeFiles/robot_navigation.dir/src/warper_robot.cpp.o
+.vscode/settings.json
