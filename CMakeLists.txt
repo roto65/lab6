@@ -9,7 +9,8 @@ add_library(${PROJECT_NAME}
     src/pos.cpp
     src/robot.cpp
     src/random_robot.cpp
-    src/right_hand_rule_robot.cpp)
+    src/right_hand_rule_robot.cpp
+    src/warper_robot.cpp)
 
 add_library(big_int
     src/big_int.cpp)

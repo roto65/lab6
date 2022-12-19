@@ -3,13 +3,14 @@
 #include "maze.h"
 #include "random_robot.h"
 #include "right_hand_rule_robot.h"
+#include "warper_robot.h"
 
 
 int main(void) {
 
-	Maze m1 = read_from_file("maps/map5.txt");
+	Maze m1 = read_from_file("maps/map6.txt");
 
-	RandomRobot r1 (m1.getStart());
+	WarperRobot r1 (m1.getStart());
 	// RightHandRuleRobot r1 (m1.getStart());
 
 	char robot_position = 'S';
@@ -19,7 +20,7 @@ int main(void) {
 	while (true) {
 		i++;
 		robot_position = r1.move(m1);
-		// std::cout << r1.getPos().x << " | " << r1.getPos().y << std::endl;
+		std::cout << r1.getPos().x << " | " << r1.getPos().y << std::endl;
 
 		switch (robot_position) {
 		case 'E':
